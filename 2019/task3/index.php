@@ -14,6 +14,7 @@ for($i = 0;$i<$notesNumber;$i++){
         }
     }
 }
+fclose($input);
 arsort($positionsArray);
 foreach ($positionsArray as $k=>$v){
     $partOfTriangle[$k] = $v/($notesNumber-1);
@@ -39,4 +40,3 @@ foreach ($partOfTriangle as $v) {
 header('Content-type: image/png' );
 ImagePng( $img);
 ImagePng( $img ,'output.png');
-
